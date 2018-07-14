@@ -17,18 +17,28 @@ public class UserService {
     this.userRepo = userRepo;
   }
 
-  //create methods to do things to the backend **hint CRUD**
-
-  public ResponseEntity<User> setUser (User user){
+  public ResponseEntity<User> createUser (User user){
     return new ResponseEntity<>(userRepo.save(user), HttpStatus.CREATED);
   }
 
   public ResponseEntity<User> getUserById(Long id){
-    return new ResponseEntity<>(userRepo.getOne(id), HttpStatus.CREATED);
+    return new ResponseEntity<>(userRepo.findById(id).get(), HttpStatus.CREATED);
   }
 
-  public ResponseEntity<User> updateUser (User updatedUser){
-    updatedUser = userRepo.save(updatedUser);
-    return new ResponseEntity<>(updatedUser, HttpStatus.OK);
+  public ResponseEntity<User> updateUserSummary (User updatedUser, Long userId){
+    User userToUpdate = userRepo.getOne(userId);
+    userToUpdate.setSummary(updatedUser.getSummary());
+    return new ResponseEntity<>(userRepo.save(userToUpdate), HttpStatus.OK);
+  }
+
+  public ResponseEntity<User> updateUserProfileName (User updatedUser, Long userId){
+    User userToUpdate = userRepo.getOne(userId);
+    userToUpdate.setProfileName(updatedUser.getProfileName());
+    return new ResponseEntity<>(userRepo.save(userToUpdate), HttpStatus.OK);
+  }
+
+  public ResponseEntity<User> deleteUser(User user) {
+    userRepo.delete(user);
+    return new ResponseEntity<>(user,HttpStatus.OK);
   }
 }
