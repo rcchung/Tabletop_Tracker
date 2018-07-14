@@ -37,8 +37,9 @@ public class UserService {
     return new ResponseEntity<>(userRepo.save(userToUpdate), HttpStatus.OK);
   }
 
-  public ResponseEntity<User> deleteUser(User user) {
-    userRepo.delete(user);
-    return new ResponseEntity<>(user,HttpStatus.OK);
+  public ResponseEntity deleteUser(Long id) {
+    User deleteUser = userRepo.getOne(id);
+    userRepo.delete(deleteUser);
+    return new ResponseEntity<>(HttpStatus.OK);
   }
 }
