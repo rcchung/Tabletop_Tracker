@@ -27,13 +27,13 @@ public class UserController {
   }
 
   @PutMapping(value = "/users/{userId}/summary")
-  public ResponseEntity<User> updateSummary(@RequestBody User user, @PathVariable Long userId){
-    return userService.updateUserSummary(user, userId);
+  public ResponseEntity<User> updateSummary(@RequestBody String newSummary, @PathVariable Long userId){
+    return userService.updateUserSummary(newSummary, userId);
   }
 
   @PutMapping(value="/users/{userId}/profileName")
-  public ResponseEntity<User> updateProfileName(@RequestBody User user, @PathVariable Long userId){
-      return userService.updateUserProfileName(user,userId);
+  public ResponseEntity<User> updateProfileName(@RequestBody String newName, @PathVariable Long userId){
+      return userService.updateUserProfileName(newName,userId);
   }
 
   @DeleteMapping(value="/users/{userId}")
