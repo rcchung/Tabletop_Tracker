@@ -21,8 +21,8 @@ public class GameService {
         return new ResponseEntity<>(gameRepo.save(game),HttpStatus.CREATED);
     }
 
-    public ResponseEntity<Game> getGameById(Long id){
-        return new ResponseEntity<>(gameRepo.findById(id).get(), HttpStatus.OK);
+    public ResponseEntity<Game> getGameById(Long id) {
+        return new ResponseEntity<>(gameRepo.findById(id).get(),HttpStatus.OK);
     }
 
     public Long getGameByName(String name){

@@ -1,54 +1,67 @@
 package com.example.demo.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.util.ArrayList;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class User {
 
-  @Id
-  @GeneratedValue
-  private long id;
-  private String summary;
-  private String profileName;
-  private String userName;
-//  private ArrayList<Game> games;
+    @Id
+    @GeneratedValue
+    private long id;
+    private String summary;
+    private String profileName;
+    private String userName;
 
-  public long getId() {
-    return id;
-  }
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+            })
+    @JoinTable(name = "user_game",
+        joinColumns = {@JoinColumn(name = "user_id")},
+    inverseJoinColumns = {@JoinColumn(name = "game_id")})
+    private Set<Game> games;
 
-  public String getSummary() {
-    return summary;
-  }
+    public long getId() {
+        return id;
+    }
 
-  public void setSummary(String summary) {
-    this.summary = summary;
-  }
+    public String getSummary() {
+        return summary;
+    }
 
-  public String getProfileName() {
-    return profileName;
-  }
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
 
-  public void setProfileName(String profileName) {
-    this.profileName = profileName;
-  }
+    public String getProfileName() {
+        return profileName;
+    }
 
-  public String getUserName() {
-    return userName;
-  }
+    public void setProfileName(String profileName) {
+        this.profileName = profileName;
+    }
 
-  public void setUserName(String userName) {
-    this.userName = userName;
-  }
+    public String getUserName() {
+        return userName;
+    }
 
-//  public ArrayList<Game> getGames() {
-//    return games;
-//  }
-//
-//  public void setGames(ArrayList<Game> games) {
-//    this.games = games;
-//  }
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public Set<Game> getGames() { return games; }
+
+    public void setGames(Set<Game> gameIds) {
+        this.games = games;
+    }
+
+    public void addGames(Game game){
+        if(games==null){
+            this.games = new HashSet<Game>();
+        }
+        games.add(game);
+    }
 }
