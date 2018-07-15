@@ -8,7 +8,7 @@ import java.util.Set;
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String summary;
     private String profileName;
@@ -20,9 +20,9 @@ public class User {
                     CascadeType.MERGE
             })
     @JoinTable(name = "user_game",
-        joinColumns = {@JoinColumn(name = "user_id")},
-    inverseJoinColumns = {@JoinColumn(name = "game_id")})
-    private Set<Game> games;
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "game_id")})
+    private Set<Game> gameLibrary;
 
     public long getId() {
         return id;
@@ -52,16 +52,20 @@ public class User {
         this.userName = userName;
     }
 
-    public Set<Game> getGames() { return games; }
 
-    public void setGames(Set<Game> gameIds) {
-        this.games = games;
+    public Set<Game> getGameLibrary() {
+        return gameLibrary;
+    }
+
+    public void setGameLibrary(Set<Game> gameLibrary) {
+        this.gameLibrary = gameLibrary;
     }
 
     public void addGames(Game game){
-        if(games==null){
-            this.games = new HashSet<Game>();
+        if(gameLibrary==null){
+            this.gameLibrary = new HashSet<Game>();
         }
-        games.add(game);
+        gameLibrary.add(game);
     }
+
 }
