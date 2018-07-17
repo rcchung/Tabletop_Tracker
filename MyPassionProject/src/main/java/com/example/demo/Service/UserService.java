@@ -25,7 +25,7 @@ public class UserService {
   }
 
   public ResponseEntity<User> createUser (User user){
-    return new ResponseEntity<>(userRepo.save(user), HttpStatus.CREATED);
+      return new ResponseEntity<>(userRepo.save(user), HttpStatus.CREATED);
   }
 
   public ResponseEntity<User> getUserById(Long id){

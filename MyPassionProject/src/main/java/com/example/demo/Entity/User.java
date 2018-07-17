@@ -12,6 +12,7 @@ public class User {
     private long id;
     private String summary;
     private String profileName;
+    @Column(unique = true)
     private String userName;
 
     @ManyToMany(fetch = FetchType.LAZY,

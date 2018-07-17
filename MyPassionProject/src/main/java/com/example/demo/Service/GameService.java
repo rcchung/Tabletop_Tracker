@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.validation.ConstraintViolationException;
+
 @Service
 public class GameService {
     private GameRepo gameRepo;
@@ -18,7 +20,7 @@ public class GameService {
     }
 
     public ResponseEntity<Game> addGame(Game game){
-        return new ResponseEntity<>(gameRepo.save(game),HttpStatus.CREATED);
+            return new ResponseEntity<>(gameRepo.save(game), HttpStatus.CREATED);
     }
 
     public ResponseEntity<Game> getGameById(Long id) {
