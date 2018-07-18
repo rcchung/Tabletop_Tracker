@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
 
 /**
  * Generated class for the FriendsPage page.
@@ -15,11 +15,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FriendsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FriendsPage');
+  addToFriendList() {
+    let toast = this.toastCtrl.create({
+      message: 'Friend Request Sent!',
+      duration: 3000,
+      position: 'bottom'
+    });
+    toast.present();
+
   }
+
+  viewFriendDetails() {}
 
 }

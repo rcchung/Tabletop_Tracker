@@ -1,9 +1,3 @@
-<!--
-  Generated template for the FriendsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -19,5 +13,31 @@
 
 
 <ion-content padding>
+
+  <ion-searchbar></ion-searchbar>
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-totoro.png">
+        </ion-thumbnail>
+        <h2>SpiderMango</h2>
+        <p>Nafear</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+
+      <ion-item-options side="left">
+        <button ion-button color="primary" (click)="viewFriendDetails()">
+          <ion-icon></ion-icon> View
+        </button>
+      </ion-item-options>
+
+      <ion-item-options side="right">
+        <button ion-button color="secondary" (click)="addToFriendList()">
+          <ion-icon></ion-icon> Add
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 
 </ion-content>
