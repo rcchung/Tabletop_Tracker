@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
 
+class item {
+  name: string;
+  description: string;
+
+  constructor(name: string, description: string){this.name = name; this.description = description}
+
+}
+
 /**
  * Generated class for the GamesPage page.
  *
@@ -15,7 +23,7 @@ import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angula
 })
 export class GamesPage {
   searchQuery: string = '';
-  items: string[];
+  items: item[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController,) {
     this.initializeItems();
@@ -52,10 +60,14 @@ export class GamesPage {
   }
 
   initializeItems() {
+    let item1 = new item('Agricola','Lookout Games • 2007');
+    let item2 = new item('Catan','KOSMOS • 1995');
+    let item3 = new item('Magic: The Gathering','Wizards of the Coast • 1993');
+
     this.items = [
-      'Agricola',
-      'Catan',
-      'Magic'
+      item1,
+      item2,
+      item3
     ];
   }
 
@@ -67,11 +79,11 @@ export class GamesPage {
     const val = ev.target.value;
 
     // if the value is an empty string don't filter the items
-    if (val && val.trim() != '') {
-      this.items = this.items.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      })
-    }
+    // if (val && val.trim() != '') {
+    //   this.items = this.items.filter((item) => {
+    //     return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+    //   })
+    // }
   }
 
 
