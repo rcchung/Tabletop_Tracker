@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
 
 /**
  * Generated class for the GamesPage page.
@@ -15,11 +15,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GamesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController,) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GamesPage');
+  doAddToOwnedList() {
+      let toast = this.toastCtrl.create({
+        message: 'Game Added To Owned List',
+        duration: 3000,
+        position: 'bottom'
+      });
+      toast.present();
+
+  }
+
+  doAddToPlayedList() {
+    let toast = this.toastCtrl.create({
+      message: 'Game Added To Played List',
+      duration: 3000,
+      position: 'bottom'
+    });
+    toast.present();
+
   }
 
 }
