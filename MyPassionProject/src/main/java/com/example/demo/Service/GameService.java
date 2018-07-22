@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.validation.ConstraintViolationException;
+import java.util.Collection;
 
 @Service
 public class GameService {
@@ -29,5 +31,9 @@ public class GameService {
 
     public Long getGameByName(String name){
         return gameRepo.findByName(name);
+    }
+
+    public Collection<Game> getAllGames() {
+        return (gameRepo.findAll());
     }
 }

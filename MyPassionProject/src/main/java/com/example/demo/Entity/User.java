@@ -7,7 +7,8 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity @Getter @Setter
+@Getter @Setter
+@Entity
 public class User {
 
     @Id
@@ -35,4 +36,11 @@ public class User {
         gameLibrary.add(game);
     }
 
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public void setProfileName(String profileName) {
+        this.profileName = profileName;
+    }
 }

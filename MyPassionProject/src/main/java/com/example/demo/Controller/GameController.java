@@ -8,8 +8,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.ConstraintViolationException;
+import java.util.Collection;
 
 @RestController
+@CrossOrigin(origins = {"http://localhost:8080","http://localhost:8100"})
 public class GameController {
 
     private GameService gameService;
@@ -24,6 +26,9 @@ public class GameController {
         return gameService.addGame(game);
 
     }
+
+    @GetMapping(value="/games")
+    public ResponseEntity<Collection<Game>> getAllGames(){return new ResponseEntity<>(gameService.getAllGames(), HttpStatus.OK);}
 
     @GetMapping(value="/games/id/{gameId}")
     public ResponseEntity<Game> getGameById(@PathVariable Long gameId){return gameService.getGameById(gameId);}
