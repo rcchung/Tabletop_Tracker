@@ -10,11 +10,7 @@ export class UsersService{
   constructor(public http: HttpClient){
   }
 
-  getAllUsers(): Observable<any> {
-    return this.http.get(this.USERS_API);
-  }
-
-  getUserById(id: String) {
-      return this.http.get(this.USERS_API+id)
+  getUserById() {
+      return this.http.get(this.USERS_API+"/1")
   }
 }
