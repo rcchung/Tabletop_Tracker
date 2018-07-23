@@ -9,14 +9,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.validation.ConstraintViolationException;
-import java.util.Collection;
+import java.util.*;
 
 @Service
 public class GameService {
     private GameRepo gameRepo;
 
     @Autowired
-
     public GameService(GameRepo gameRepo) {
         this.gameRepo = gameRepo;
     }
@@ -36,4 +35,14 @@ public class GameService {
     public Collection<Game> getAllGames() {
         return (gameRepo.findAll());
     }
+
+    public Set<Game> getGamesByUserId(Long userId) {
+        Collection<Long> gameIds = gameRepo.findUserGames(userId);
+        Set<Game> games = new HashSet<>();
+        for (Long id : gameIds) {
+            games.add(getGameById(id).getBody());
+        }
+        return games;
+    }
 }
+

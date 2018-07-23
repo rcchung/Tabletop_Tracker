@@ -12,7 +12,4 @@ import java.util.Set;
 
 @RepositoryRestResource
 public interface UserRepo extends JpaRepository<User, Long> {
-//    @Query("select id from user_game where user_id = :userId")
-//    Set<Long> findUserGames(@Param("userId")Long userId);
-
 }

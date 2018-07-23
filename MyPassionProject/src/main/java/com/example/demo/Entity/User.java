@@ -19,7 +19,7 @@ public class User {
     @Column(unique = true)
     private String userName;
 
-    @ManyToMany(fetch = FetchType.LAZY,
+    @ManyToMany(
             cascade = {
                     CascadeType.PERSIST,
                     CascadeType.MERGE

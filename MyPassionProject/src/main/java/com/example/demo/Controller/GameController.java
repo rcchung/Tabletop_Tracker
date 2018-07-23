@@ -2,6 +2,7 @@ package com.example.demo.Controller;
 
 import com.example.demo.Entity.Game;
 import com.example.demo.Service.GameService;
+import com.example.demo.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +23,6 @@ public class GameController {
     @PostMapping(value="/games")
     public ResponseEntity<Game> addGame(@RequestBody Game game) {
         return gameService.addGame(game);
-
     }
 
     @GetMapping(value="/games")
@@ -33,4 +33,9 @@ public class GameController {
 
     @GetMapping(value="/games/name/{gameName}")
     public Long getGameByName(@PathVariable String gameName){return gameService.getGameByName(gameName);}
+
+    @GetMapping(value="/games/{userId}")
+    public Collection<Game> getGamesByUserId(@PathVariable Long userId){
+        return gameService.getGamesByUserId(userId);
+    }
 }

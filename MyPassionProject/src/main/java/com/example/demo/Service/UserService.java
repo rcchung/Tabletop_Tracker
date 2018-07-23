@@ -54,4 +54,5 @@ public class UserService {
     user.addGames(game);
     return new ResponseEntity<>(userRepo.save(user), HttpStatus.OK);
   }
+
 }
