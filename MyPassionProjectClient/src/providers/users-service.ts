@@ -13,4 +13,9 @@ export class UsersService{
   getUserById() {
       return this.http.get(this.USERS_API+"/1")
   }
+
+  addUser(account): Observable<any>{
+    console.log(account);
+    return this.http.post(this.USERS_API,account);
+  }
 }
