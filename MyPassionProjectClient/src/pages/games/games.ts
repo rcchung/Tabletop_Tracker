@@ -19,25 +19,25 @@ export class GamesPage {
     ;
   }
   
-  ionViewDidLoad() {
-  }
-
-  getItems(ev: any) {
-    // Reset items back to all of the items
-    this.filteredGames = this.games;
-    // set val to the value of the searchbar
-    const val = ev.target.value;
-    // if the value is an empty string don't filter the items
-    if (val && val.trim() != '') {
-      this.filterGamesBySearch(val);
+    ionViewDidLoad() {
     }
-  }
 
-filterGamesBySearch(searchTerm){
-  this.filteredGames = this.games.filter((games) => {
-      return games.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
-  });    
-}
+    getItems(ev: any) {
+      // Reset items back to all of the items
+      this.filteredGames = this.games;
+      // set val to the value of the searchbar
+      const val = ev.target.value;
+      // if the value is an empty string don't filter the items
+      if (val && val.trim() != '') {
+        this.filterGamesBySearch(val);
+      }
+    }
+
+  filterGamesBySearch(searchTerm){
+    this.filteredGames = this.games.filter((games) => {
+        return games.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+    });    
+  }
 
   doAddToOwnedList() {
       let toast = this.toastCtrl.create({

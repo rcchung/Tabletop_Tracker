@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Search Games</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-searchbar [(ngModel)]="searchTerm" (search)="searchGame($event)" placeholder="Search Games" debounce="500"></ion-searchbar>
+  <ion-list>
+    <ion-item-sliding *ngFor="let game of searchResult">
+      <ion-item>
+      <ion-thumbnail item-start>
+        <img src={{game.thumbnail}}>
+      </ion-thumbnail>
+      <h2>{{game.name}}</h2>
+      <p>{{game.mechanics}}</p>
+      <button ion-button clear item-end>View</button>
+        </ion-item>
+
+
+      <ion-item-options side="left">
+        <button ion-button color="primary" (click)="doAddToOwnedAndPlayedList()">
+          <ion-icon name="add"></ion-icon> Owned and Played
+        </button>
+      </ion-item-options>
+
+      <ion-item-options side="right">
+      <button ion-button color="primary" (click)="doAddToOwnedList()">
+      <ion-icon name="add"></ion-icon> Owned
+      </button>
+        <button ion-button color="secondary" (click)="doAddToPlayedList()">
+          <ion-icon name="add"></ion-icon> Played
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

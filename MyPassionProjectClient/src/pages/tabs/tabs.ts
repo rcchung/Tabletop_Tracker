@@ -15,13 +15,10 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 })
 export class TabsPage {
 
-  // homeRoot = 'HomePage'
-  // friendsRoot = 'FriendsPage'
-  // gamesRoot = 'GamesPage'
-
   profileRoot: any = 'ProfilePage';
   friendsRoot: any = 'FriendsPage';
   gamesRoot: any = 'GamesPage';
+  gameSearchRoot: any = 'GameSearchPage';
   myIndex: number;
 
 

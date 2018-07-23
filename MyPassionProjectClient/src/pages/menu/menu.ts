@@ -28,6 +28,7 @@ export class MenuPage {
   pages: PageInterface[] = [
     { title: 'Home', pageName: 'TabsPage', tabComponent: 'ProfilePage', index: 0, icon: 'home' },
     { title: 'Games', pageName: 'TabsPage', tabComponent: 'GamesPage', index: 1, icon: 'search' },
+    { title: 'Game Search', pageName: 'TabsPage', tabComponent: 'GameSearchPage', index: 1, icon: 'search' },
     { title: 'Friends', pageName: 'TabsPage', tabComponent: 'FriendsPage', index: 2, icon: 'contacts' },
   ];
 
