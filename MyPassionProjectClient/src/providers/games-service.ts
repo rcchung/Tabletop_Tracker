@@ -10,11 +10,12 @@ export class GamesService{
   constructor(public http: HttpClient){
   }
 
-  getAllGames(): Observable<any> {
+  getAllGames(){
     return this.http.get(this.GAMES_API);
   }
 
   getGameById(id: String) {
       return this.http.get(this.GAMES_API+"/id/"+id)
   }
+
 }

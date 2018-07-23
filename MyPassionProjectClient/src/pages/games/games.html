@@ -12,10 +12,9 @@
 
 <ion-content padding>
 
-  <!-- <ion-searchbar (ionInput)="getItems($event)" placeholder="Search Games"></ion-searchbar> -->
-  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="getItems($event)" placeholder="Search Games"></ion-searchbar>
   <ion-list>
-    <ion-item-sliding *ngFor="let game of games">
+    <ion-item-sliding *ngFor="let game of filteredGames">
       <ion-item>
       <ion-thumbnail item-start>
         <img src="">
