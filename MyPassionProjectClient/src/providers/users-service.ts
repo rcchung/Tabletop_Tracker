@@ -21,7 +21,7 @@ export class UsersService{
   }
 
   updateProfile(profile): Observable<any>{
-    return this.http.put(this.USERS_API + "/1", profile);
+    return this.http.patch(this.USERS_API + "/1", profile);
   }
 
   getUserProfile(){

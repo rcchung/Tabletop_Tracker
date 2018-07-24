@@ -4,6 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -29,6 +34,9 @@ public class User {
             inverseJoinColumns = {@JoinColumn(name = "game_id")})
     private Set<Game> gameLibrary;
 
+//    @Lob
+//    private byte[] profilePic;
+
     public void addGames(Game game){
         if(gameLibrary==null){
             this.gameLibrary = new HashSet<Game>();
@@ -51,4 +59,16 @@ public class User {
     public String getProfileName() {
         return profileName;
     }
+
+//    public void setProfilePic(File input){
+//        byte[] picInBytes = new byte[(int)input.length()];
+//        try {
+//            FileInputStream fileInputStream = new FileInputStream(input);
+//            fileInputStream.read(picInBytes);
+//            fileInputStream.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        profilePic=picInBytes;
+//    }
 }

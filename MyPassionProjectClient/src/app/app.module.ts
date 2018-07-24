@@ -8,12 +8,18 @@ import {MenuPageModule} from "../pages/menu/menu.module";
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { UsersService } from '../providers/users-service';
 import { ProfileModalPage } from '../pages/settings/profile-modal';
+import { PictureModalPage } from '../pages/settings/picture-modal';
+import { Transfer } from '../../node_modules/@ionic-native/transfer';
+import { Camera } from '../../node_modules/@ionic-native/camera';
+import { FilePath } from '../../node_modules/@ionic-native/file-path';
+import {File} from '../../node_modules/@ionic-native/file';
 
 
 @NgModule({
   declarations: [
     MyApp,
-    ProfileModalPage
+    ProfileModalPage,
+    PictureModalPage
   ],
   imports: [
     BrowserModule,
@@ -25,11 +31,16 @@ import { ProfileModalPage } from '../pages/settings/profile-modal';
   entryComponents: [
     MyApp,
     ProfileModalPage,
+    PictureModalPage
    ],
   providers: [
     StatusBar,
     SplashScreen,
     UsersService,
+    File,
+    Transfer,
+    Camera,
+    FilePath,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

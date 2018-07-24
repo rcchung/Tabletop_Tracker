@@ -26,7 +26,7 @@ public class UserController {
     return userService.getUserById(userId);
   }
 
-  @PutMapping(value = "/users/{userId}")
+  @PatchMapping(value = "/users/{userId}")
   public ResponseEntity<User> updateSummary(@RequestBody User user, @PathVariable Long userId){
     return userService.updateUserProfile(user, userId);
   }
