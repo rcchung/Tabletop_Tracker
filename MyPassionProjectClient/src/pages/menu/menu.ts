@@ -3,7 +3,8 @@ import {GamesPage} from "../games/games";
 import {FriendsPage} from "../friends/friends";
 import { TabsPage } from './../tabs/tabs';
 import {Component, ViewChild} from '@angular/core';
-import { IonicPage, NavController, Nav, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, Nav, NavParams, MenuController } from 'ionic-angular';
+import { WelcomePage } from "../welcome/welcome";
 
 export interface PageInterface {
   title: string;
@@ -30,10 +31,10 @@ export class MenuPage {
     { title: 'MyGames', pageName: 'TabsPage', tabComponent: 'GamesPage', index: 1, icon: 'search' },
     { title: 'Game Search', pageName: 'TabsPage', tabComponent: 'GameSearchPage', index: 2, icon: 'search' },
     { title: 'Friends', pageName: 'TabsPage', tabComponent: 'FriendsPage', index: 3, icon: 'contacts' },
-    { title: 'Settings', pageName: 'SettingsPage', icon: 'search' },
+    { title: 'Settings', pageName: 'SettingsPage', icon: 'build' },
   ];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
   }
 
   openPage(page: PageInterface) {
@@ -70,6 +71,11 @@ export class MenuPage {
       return 'primary';
     }
     return;
+  }
+
+  logout(){
+    this.menuCtrl.close();
+    this.navCtrl.setRoot(WelcomePage);
   }
 
 }
