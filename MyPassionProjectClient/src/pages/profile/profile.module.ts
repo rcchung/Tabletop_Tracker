@@ -5,7 +5,7 @@ import { UsersService } from '../../providers/users-service';
 
 @NgModule({
   declarations: [
-    ProfilePage,
+    ProfilePage
   ],
   imports: [
     IonicPageModule.forChild(ProfilePage),

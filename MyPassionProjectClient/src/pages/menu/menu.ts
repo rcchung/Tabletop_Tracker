@@ -21,16 +21,16 @@ export interface PageInterface {
 export class MenuPage {
   // Basic root for our content view
   rootPage = 'TabsPage';
-  userName: String;
 
   // Reference to the app's root nav
   @ViewChild(Nav) nav: Nav;
 
   pages: PageInterface[] = [
     { title: 'Home', pageName: 'TabsPage', tabComponent: 'ProfilePage', index: 0, icon: 'home' },
-    { title: 'Games', pageName: 'TabsPage', tabComponent: 'GamesPage', index: 1, icon: 'search' },
-    { title: 'Game Search', pageName: 'TabsPage', tabComponent: 'GameSearchPage', index: 1, icon: 'search' },
-    { title: 'Friends', pageName: 'TabsPage', tabComponent: 'FriendsPage', index: 2, icon: 'contacts' },
+    { title: 'MyGames', pageName: 'TabsPage', tabComponent: 'GamesPage', index: 1, icon: 'search' },
+    { title: 'Game Search', pageName: 'TabsPage', tabComponent: 'GameSearchPage', index: 2, icon: 'search' },
+    { title: 'Friends', pageName: 'TabsPage', tabComponent: 'FriendsPage', index: 3, icon: 'contacts' },
+    { title: 'Settings', pageName: 'SettingsPage', icon: 'search' },
   ];
 
   constructor(public navCtrl: NavController) {
@@ -41,7 +41,7 @@ export class MenuPage {
 
     // The index is equal to the order of our tabs inside tabs.ts
     if (page.index) {
-      params = { tabIndex: page.index, userName: this.userName };
+      params = { tabIndex: page.index };
     }
 
     // The active child nav is our Tabs Navigation

@@ -3,16 +3,17 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
 import { MyApp } from './app.component';
 import {MenuPageModule} from "../pages/menu/menu.module";
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { UsersService } from '../providers/users-service';
+import { ProfileModalPage } from '../pages/settings/profile-modal';
 
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    ProfileModalPage
   ],
   imports: [
     BrowserModule,
@@ -22,8 +23,9 @@ import { UsersService } from '../providers/users-service';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
-  ],
+    MyApp,
+    ProfileModalPage,
+   ],
   providers: [
     StatusBar,
     SplashScreen,

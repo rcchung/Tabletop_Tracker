@@ -11,10 +11,6 @@ export class UsersService{
   constructor(public http: HttpClient){
   }
 
-  getUserById() {
-      return this.http.get(this.USERS_API+"/1")
-  }
-
   addUser(account): Observable<any>{
    this.setUser(account);
     return this.http.post(this.USERS_API,account);
@@ -22,6 +18,13 @@ export class UsersService{
 
   setUser(account){
     this.userName = account.userName;
-    console.log(this.userName);
+  }
+
+  updateProfile(profile): Observable<any>{
+    return this.http.put(this.USERS_API + "/1", profile);
+  }
+
+  getUserProfile(){
+    return this.http.get(this.USERS_API+"/1")
   }
 }

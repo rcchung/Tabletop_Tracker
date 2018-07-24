@@ -30,16 +30,15 @@ public class UserService {
     return new ResponseEntity<>(userRepo.findById(id).get(), HttpStatus.CREATED);
   }
 
-  public ResponseEntity<User> updateUserSummary (String newSummary, Long userId){
-    User userToUpdate = userRepo.getOne(userId);
-    userToUpdate.setSummary(newSummary);
-    return new ResponseEntity<>(userRepo.save(userToUpdate), HttpStatus.OK);
-  }
-
-  public ResponseEntity<User> updateUserProfileName (String newName, Long userId){
-    User userToUpdate = userRepo.getOne(userId);
-    userToUpdate.setProfileName(newName);
-    return new ResponseEntity<>(userRepo.save(userToUpdate), HttpStatus.OK);
+  public ResponseEntity<User> updateUserProfile (User user, Long userId){
+    User currentUser = userRepo.getOne(userId);
+    if(user.getSummary()!=null) {
+      currentUser.setSummary(user.getSummary());
+    }
+    if(user.getProfileName()!=null){
+      currentUser.setProfileName(user.getProfileName());
+    }
+    return new ResponseEntity<>(userRepo.save(currentUser), HttpStatus.OK);
   }
 
   public ResponseEntity deleteUser(Long id) {

@@ -43,4 +43,12 @@ public class User {
     public void setProfileName(String profileName) {
         this.profileName = profileName;
     }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public String getProfileName() {
+        return profileName;
+    }
 }
