@@ -3,7 +3,7 @@ import {GamesPage} from "../games/games";
 import {FriendsPage} from "../friends/friends";
 import { TabsPage } from './../tabs/tabs';
 import {Component, ViewChild} from '@angular/core';
-import { IonicPage, NavController, Nav } from 'ionic-angular';
+import { IonicPage, NavController, Nav, NavParams } from 'ionic-angular';
 
 export interface PageInterface {
   title: string;
@@ -21,6 +21,7 @@ export interface PageInterface {
 export class MenuPage {
   // Basic root for our content view
   rootPage = 'TabsPage';
+  userName: String;
 
   // Reference to the app's root nav
   @ViewChild(Nav) nav: Nav;
@@ -40,7 +41,7 @@ export class MenuPage {
 
     // The index is equal to the order of our tabs inside tabs.ts
     if (page.index) {
-      params = { tabIndex: page.index };
+      params = { tabIndex: page.index, userName: this.userName };
     }
 
     // The active child nav is our Tabs Navigation

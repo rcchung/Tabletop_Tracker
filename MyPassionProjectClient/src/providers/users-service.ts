@@ -6,6 +6,7 @@ import {Observable} from "rxjs/Observable";
 export class UsersService{
   public API = "http://localhost:8080";
   public USERS_API = this.API + "/users";
+  userName: String;
 
   constructor(public http: HttpClient){
   }
@@ -15,7 +16,12 @@ export class UsersService{
   }
 
   addUser(account): Observable<any>{
-    console.log(account);
+   this.setUser(account);
     return this.http.post(this.USERS_API,account);
+  }
+
+  setUser(account){
+    this.userName = account.userName;
+    console.log(this.userName);
   }
 }

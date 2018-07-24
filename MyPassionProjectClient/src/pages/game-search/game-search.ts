@@ -11,6 +11,7 @@ export class GameSearchPage {
     game: any;
     searchResult: any;
     searchTerm: '';
+    userName: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public bggGames: BggGameSearch) {
   }

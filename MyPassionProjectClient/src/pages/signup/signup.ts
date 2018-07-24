@@ -3,13 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {MenuPage} from "../menu/menu";
 import { UsersService } from '../../providers/users-service';
 
-/**
- * Generated class for the SignupPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-signup',
@@ -22,7 +15,7 @@ export class SignupPage {
     password:''
   };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private usersService: UsersService) {
+  constructor(public navCtrl: NavController, private usersService: UsersService) {
   }
 
   createAccount() {
