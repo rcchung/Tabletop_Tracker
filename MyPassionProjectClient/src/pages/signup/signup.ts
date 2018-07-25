@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Menu } from 'ionic-angular';
 import {MenuPage} from "../menu/menu";
 import { UsersService } from '../../providers/users-service';
-import { ProfilePage } from '../profile/profile';
 
 @IonicPage()
 @Component({

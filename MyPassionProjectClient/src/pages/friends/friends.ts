@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
+import { UsersService } from '../../providers/users-service';
 
 @IonicPage()
 @Component({
@@ -8,7 +9,7 @@ import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angula
 })
 export class FriendsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public usersService: UsersService) {
   }
 
   addToFriendList() {
@@ -22,5 +23,7 @@ export class FriendsPage {
   }
 
   viewFriendDetails() {}
+
+  get(){console.log(this.usersService.user)}
 
 }

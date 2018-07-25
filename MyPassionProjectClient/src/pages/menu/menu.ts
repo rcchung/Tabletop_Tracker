@@ -1,6 +1,6 @@
-import {ProfilePage} from "../profile/profile";
 import {GamesPage} from "../games/games";
 import {FriendsPage} from "../friends/friends";
+import {SummaryPage} from "../summary/summary";
 import { TabsPage } from './../tabs/tabs';
 import {Component, ViewChild} from '@angular/core';
 import { IonicPage, NavController, Nav, NavParams, MenuController } from 'ionic-angular';
@@ -28,7 +28,7 @@ export class MenuPage {
   @ViewChild(Nav) nav: Nav;
 
   pages: PageInterface[] = [
-    { title: 'Home', pageName: 'TabsPage', tabComponent: 'ProfilePage', index: 0, icon: 'home' },
+    { title: 'MyPage', pageName: 'TabsPage', tabComponent: 'SummaryPage', index: 0, icon: 'home' },
     { title: 'MyGames', pageName: 'TabsPage', tabComponent: 'GamesPage', index: 1, icon: 'search' },
     { title: 'Game Search', pageName: 'TabsPage', tabComponent: 'GameSearchPage', index: 2, icon: 'search' },
     { title: 'Friends', pageName: 'TabsPage', tabComponent: 'FriendsPage', index: 3, icon: 'contacts' },
@@ -45,6 +45,9 @@ export class MenuPage {
     // The index is equal to the order of our tabs inside tabs.ts
     if (page.index) {
       params = { tabIndex: page.index};
+      console.log(params);
+      console.log("param1");
+      console.log(this.usersService.user);
     }
 
     // The active child nav is our Tabs Navigation
@@ -53,6 +56,9 @@ export class MenuPage {
     } else {
       // Tabs are not active, so reset the root page
       // In this case: moving to or from SpecialPage
+      console.log(params);
+      console.log("param2");
+      console.log(this.usersService.user);
       this.nav.setRoot(page.pageName, params);
     }
   }

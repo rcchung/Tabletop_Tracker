@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { ProfileModalPage } from './profile-modal';
 import { PictureModalPage } from './picture-modal';
-import { ProfilePage } from '../profile/profile';
 
 @IonicPage()
 @Component({
