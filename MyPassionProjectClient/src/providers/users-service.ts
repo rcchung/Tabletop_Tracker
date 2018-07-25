@@ -4,7 +4,7 @@ import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class UsersService{
-  public API = "http://localhost:8080";
+  public API = "http://rchung.rchung.ultrahook.com";
   public USERS_API = this.API + "/users";
   userName: String;
 

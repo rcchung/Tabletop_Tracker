@@ -28,8 +28,4 @@ export class SettingsPage {
     modal.present();
   }
 
-  dismiss() {
-    this.navCtrl.setRoot(ProfilePage);
-  }
-
 }
