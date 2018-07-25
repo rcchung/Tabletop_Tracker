@@ -110,7 +110,7 @@ export class PictureModalPage{
 
     public uploadImage() {
         // Destination URL
-        var url = "http://localhost:8080/upload";
+        var url = "http://rchung.rchung.ultrahook.com/upload";
        
         // File for Upload
         var targetPath = this.pathForImage(this.lastImage);
@@ -123,7 +123,8 @@ export class PictureModalPage{
           fileName: filename,
           chunkedMode: false,
           mimeType: "multipart/form-data",
-          params : {'fileName': filename}
+          params : {'fileName': filename},
+          httpMethod: 'POST'
         };
        
         const fileTransfer: TransferObject = this.transfer.create();

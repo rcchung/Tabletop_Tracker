@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
+
 @RestController
 @CrossOrigin(origins = {"http://localhost:8080","http://localhost:8100"})
 public class UserController {
@@ -27,7 +29,7 @@ public class UserController {
   }
 
   @PatchMapping(value = "/users/{userId}")
-  public ResponseEntity<User> updateSummary(@RequestBody User user, @PathVariable Long userId){
+  public ResponseEntity<User> updateProfile(@RequestBody User user, @PathVariable Long userId){
     return userService.updateUserProfile(user, userId);
   }
 
@@ -40,4 +42,7 @@ public class UserController {
     public ResponseEntity<User> updateGameLibrary(@RequestBody String gameId, @PathVariable Long userId){
       return userService.updateUserLibrary(Long.valueOf(gameId),userId);
   }
+
+//    @PostMapping(value="/upload")
+//    public ResponseEntity<User> upload(@RequestBody File file){return userService.upload(file);}
 }

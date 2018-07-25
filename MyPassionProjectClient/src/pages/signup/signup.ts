@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Menu } from 'ionic-angular';
 import {MenuPage} from "../menu/menu";
 import { UsersService } from '../../providers/users-service';
+import { ProfilePage } from '../profile/profile';
 
 @IonicPage()
 @Component({
@@ -19,9 +20,12 @@ export class SignupPage {
   }
 
   createAccount() {
-    this.usersService.addUser(this.account).subscribe(response  => {
-      this.navCtrl.setRoot(MenuPage);
-    })
+     this.usersService.addUser(this.account).subscribe(response => {
+      // this.usersService.user = response;
+      this.usersService.setUser(response);
+      console.log(this.usersService.user.profileName);
+      this.usersService.userId = response.id;
+      this.navCtrl.setRoot(MenuPage); 
+     })
   }
-
 }

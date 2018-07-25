@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+import java.io.File;
+
 @Service
 public class UserService {
   private UserRepo userRepo;
@@ -53,5 +55,11 @@ public class UserService {
     user.addGames(game);
     return new ResponseEntity<>(userRepo.save(user), HttpStatus.OK);
   }
+
+//  public ResponseEntity<User> upload(File file){
+//      User user = userRepo.getOne(1L);
+//      user.setProfilePic(file);
+//      return new ResponseEntity<>(userRepo.save(user), HttpStatus.OK);
+//  }
 
 }

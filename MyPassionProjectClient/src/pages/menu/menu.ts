@@ -5,6 +5,7 @@ import { TabsPage } from './../tabs/tabs';
 import {Component, ViewChild} from '@angular/core';
 import { IonicPage, NavController, Nav, NavParams, MenuController } from 'ionic-angular';
 import { WelcomePage } from "../welcome/welcome";
+import { UsersService } from "../../providers/users-service";
 
 export interface PageInterface {
   title: string;
@@ -34,7 +35,8 @@ export class MenuPage {
     { title: 'Settings', pageName: 'SettingsPage', icon: 'build' },
   ];
 
-  constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController, public usersService: UsersService) {
+    console.log(this.usersService.getUser());
   }
 
   openPage(page: PageInterface) {
@@ -42,7 +44,7 @@ export class MenuPage {
 
     // The index is equal to the order of our tabs inside tabs.ts
     if (page.index) {
-      params = { tabIndex: page.index };
+      params = { tabIndex: page.index};
     }
 
     // The active child nav is our Tabs Navigation
