@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:8080","http://localhost:8100"})
+@CrossOrigin//(origins = {"http://localhost:8080","http://localhost:8100"})
 public class GameController {
 
     private GameService gameService;
