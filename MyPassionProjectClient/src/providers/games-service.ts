@@ -4,7 +4,7 @@ import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class GamesService{
-  public API = "http://localhost:8080";
+  public API = "https://tabletoptracker.herokuapp.com";
   public GAMES_API = this.API + "/games";
 
   constructor(public http: HttpClient){

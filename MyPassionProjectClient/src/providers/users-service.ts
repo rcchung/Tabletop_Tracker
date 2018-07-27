@@ -18,7 +18,7 @@ export class User {
 
 @Injectable()
 export class UsersService{
-  public API = "http://localhost:8080";
+  public API = "https://tabletoptracker.herokuapp.com";
   public USERS_API = this.API + "/users";
   public user: User;
   public userId: number;
