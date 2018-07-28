@@ -20,9 +20,7 @@ export class SignupPage {
 
   createAccount() {
      this.usersService.addUser(this.account).subscribe(response => {
-      // this.usersService.user = response;
       this.usersService.setUser(response);
-      console.log(this.usersService.user.profileName);
       this.usersService.userId = response.id;
       this.navCtrl.setRoot(MenuPage); 
      })

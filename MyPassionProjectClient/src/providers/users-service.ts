@@ -31,14 +31,8 @@ export class UsersService{
   }
 
   setUser(account){
-    console.log("setuser");
-    console.log(account);
     this.userId = account.id;
     this.user = account;
-    console.log("this id");
-    console.log(this.userId);
-    console.log(this.user);
-    console.log("why does this work?")
   }
 
   getUser() {
@@ -49,9 +43,7 @@ export class UsersService{
     return this.http.patch(this.USERS_API + "/" + this.userId, profile);
   }
 
-  getUserProfile(){
-    console.log("getprofile");
-    console.log(this.userId);
+  getUserProfile(): Observable<any>{
     return this.http.get(this.USERS_API+ "/" + this.userId);
   }
 }

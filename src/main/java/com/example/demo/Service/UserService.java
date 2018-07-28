@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.File;
 
@@ -54,6 +55,10 @@ public class UserService {
     Game game = gameController.getGameById(gameId).getBody();
     user.addGames(game);
     return new ResponseEntity<>(userRepo.save(user), HttpStatus.OK);
+  }
+
+  public User findUserByUserName(String userName){
+    return (userRepo.findByUserName(userName));
   }
 
 //  public ResponseEntity<User> upload(File file){

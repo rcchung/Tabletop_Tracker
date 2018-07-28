@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7490434-64fb-4385-9a0e-a04ccfae4c30" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/MyPassionProjectClient/src/providers/games-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/MyPassionProjectClient/src/providers/games-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/login/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/signup/signup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/signup/signup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/summary/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/summary/summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyPassionProjectClient/src/providers/users-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/MyPassionProjectClient/src/providers/users-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Repository/UserRepo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRepo.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserRepo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Repository/UserRepo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state relative-caret-position="120">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -71,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="105">
+              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -85,6 +87,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameRepo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Repository/GameRepo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="13" column="47" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="13" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -102,6 +113,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GameController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/Repository/UserRepo.java" />
       </list>
     </option>
   </component>
@@ -294,12 +306,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532732568804</updated>
-      <workItem from="1532732570325" duration="975000" />
+      <workItem from="1532732570325" duration="1727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="975000" />
+    <option name="totallyTimeSpent" value="1727000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
@@ -352,13 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -373,17 +378,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Repository/UserRepo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -394,10 +392,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Entity/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="113">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Controller/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Repository/GameRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="47" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Repository/UserRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
         </state>
       </provider>
     </entry>

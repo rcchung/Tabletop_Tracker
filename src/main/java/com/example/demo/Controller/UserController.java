@@ -43,6 +43,9 @@ public class UserController {
       return userService.updateUserLibrary(Long.valueOf(gameId),userId);
   }
 
+  @GetMapping(value = "/users/{userName}")
+  public User getUserByUserName(@PathVariable String userName){return userService.findUserByUserName(userName);}
+
 //    @PostMapping(value="/upload")
 //    public ResponseEntity<User> upload(@RequestBody File file){return userService.upload(file);}
 }
