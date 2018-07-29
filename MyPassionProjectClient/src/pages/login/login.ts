@@ -20,12 +20,12 @@ export class LoginPage {
 
   doLogin() {
     console.log("login");
+    this.usersService.getUserIdByUserName(this.account.userName);
     this.usersService.getUserProfile().subscribe(response => {
-      console.log(response);
-      console.log("response");
-      // this.usersService.setUser(response);
-      // this.usersService.userId = response.id;
-    })
+        this.usersService.setUser(response)
+        console.log("get profile");
+        console.log(response);
+      })
     this.navCtrl.setRoot(MenuPage);
   }
 }

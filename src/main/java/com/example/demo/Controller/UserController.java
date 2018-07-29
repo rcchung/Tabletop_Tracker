@@ -1,6 +1,5 @@
 package com.example.demo.Controller;
 
-import com.example.demo.Entity.Game;
 import com.example.demo.Entity.User;
 import com.example.demo.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +27,7 @@ public class UserController {
     return userService.getUserById(userId);
   }
 
-  @PatchMapping(value = "/users/{userId}")
+  @PatchMapping(value = "/users/id/{userId}")
   public ResponseEntity<User> updateProfile(@RequestBody User user, @PathVariable Long userId){
     return userService.updateUserProfile(user, userId);
   }
@@ -43,7 +42,7 @@ public class UserController {
       return userService.updateUserLibrary(Long.valueOf(gameId),userId);
   }
 
-  @GetMapping(value = "/users/{userName}")
+  @GetMapping(value = "/users/username/{userName}")
   public User getUserByUserName(@PathVariable String userName){return userService.findUserByUserName(userName);}
 
 //    @PostMapping(value="/upload")

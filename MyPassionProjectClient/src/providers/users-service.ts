@@ -21,7 +21,7 @@ export class UsersService{
   public API = "https://tabletoptracker.herokuapp.com";
   public USERS_API = this.API + "/users";
   public user: User;
-  public userId: number;
+  public userId: any;
 
   constructor(public http: HttpClient){
   }
@@ -44,6 +44,14 @@ export class UsersService{
   }
 
   getUserProfile(): Observable<any>{
-    return this.http.get(this.USERS_API+ "/" + this.userId);
+    return this.http.get(this.USERS_API+ "/id/" + this.userId);
+  }
+
+  getUserIdByUserName(userName:String){
+    this.http.get(this.USERS_API + "/username/" + userName).subscribe(response => {
+      this.userId = response;
+      console.log("got user");
+      console.log(response);
+    })
   }
 }
