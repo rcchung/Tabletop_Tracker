@@ -21,7 +21,6 @@ export class SignupPage {
   createAccount() {
      this.usersService.addUser(this.account).subscribe(response => {
       this.usersService.setUser(response);
-      this.usersService.userId = response.id;
       this.navCtrl.setRoot(MenuPage); 
      })
   }

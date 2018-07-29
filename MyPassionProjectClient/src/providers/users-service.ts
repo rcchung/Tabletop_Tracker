@@ -48,10 +48,6 @@ export class UsersService{
   }
 
   getUserIdByUserName(userName:String){
-    this.http.get(this.USERS_API + "/username/" + userName).subscribe(response => {
-      this.userId = response;
-      console.log("got user");
-      console.log(response);
-    })
+    return this.http.get(this.USERS_API + "/username/" + userName);
   }
 }

@@ -22,12 +22,12 @@ public class UserController {
   @PostMapping(value="/users")
   public ResponseEntity<User> createUser(@RequestBody User user){return userService.createUser(user);}
 
-  @GetMapping(value = "/users/{userId}")
+  @GetMapping(value = "/users/id/{userId}")
   public ResponseEntity<User> getUserById(@PathVariable Long userId){
     return userService.getUserById(userId);
   }
 
-  @PatchMapping(value = "/users/id/{userId}")
+  @PatchMapping(value = "/users/{userId}")
   public ResponseEntity<User> updateProfile(@RequestBody User user, @PathVariable Long userId){
     return userService.updateUserProfile(user, userId);
   }

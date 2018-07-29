@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7490434-64fb-4385-9a0e-a04ccfae4c30" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/login/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/login/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/signup/signup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/MyPassionProjectClient/src/pages/signup/signup.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyPassionProjectClient/src/providers/users-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/MyPassionProjectClient/src/providers/users-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Controller/UserController.java" afterDir="false" />
     </list>
@@ -37,8 +39,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -308,12 +310,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532732568804</updated>
-      <workItem from="1532732570325" duration="2031000" />
+      <workItem from="1532732570325" duration="2417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2031000" />
+    <option name="totallyTimeSpent" value="2417000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
@@ -421,8 +423,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
         </state>
       </provider>
     </entry>

@@ -18,14 +18,13 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public usersService: UsersService) {
   }
 
-  doLogin() {
+doLogin() {
     console.log("login");
-    this.usersService.getUserIdByUserName(this.account.userName);
-    this.usersService.getUserProfile().subscribe(response => {
-        this.usersService.setUser(response)
-        console.log("get profile");
-        console.log(response);
-      })
-    this.navCtrl.setRoot(MenuPage);
+    this.usersService.getUserIdByUserName(this.account.userName).subscribe(response => {
+      this.usersService.setUser(response);
+      console.log(response);
+      console.log("response");
+      this.navCtrl.setRoot(MenuPage);
+    })    
   }
 }
